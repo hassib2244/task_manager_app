@@ -10,6 +10,7 @@ class pinVerificationScreen extends StatefulWidget {
 }
 
 class _pinVerificationScreenState extends State<pinVerificationScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
