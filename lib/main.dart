@@ -10,7 +10,6 @@ import 'package:taskmanager/utility/utility.dart';
 
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
-
   String? token = await ReadUserData("token");
   if(token==null){
     runApp(MyApp("/newTaskList"));
@@ -21,10 +20,8 @@ void main()async {
 
 }
 class MyApp extends StatelessWidget{
-
   final String FirstRoute;
   MyApp(this.FirstRoute);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
