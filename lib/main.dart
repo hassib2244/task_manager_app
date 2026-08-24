@@ -21,12 +21,14 @@ void main()async {
 
 }
 class MyApp extends StatelessWidget{
+
   final String FirstRoute;
   MyApp(this.FirstRoute);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title:"Ebo Task Manager",
       initialRoute: FirstRoute,
       routes: {
