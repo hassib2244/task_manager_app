@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../api/apiClient.dart';
+
 class completedTaskList extends StatefulWidget {
   const completedTaskList({super.key});
 
@@ -8,10 +10,28 @@ class completedTaskList extends StatefulWidget {
 }
 
 class _completedTaskListState extends State<completedTaskList> {
+
+  List TaskItem=[];
+  bool Loading=true;
+
+  @override
+  void initState(){
+    CallData();
+    super.initState();
+  }
+
+  CallData()async{
+    var data= await TaskListRequest("Completed");
+    setState(() {
+      Loading=false;
+      TaskItem=data;
+    });
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('completed'),
-    );
+    return Loading?(Center(child: CircularProgressIndicator(),)):(Center(child: Text('New'),));
   }
 }
