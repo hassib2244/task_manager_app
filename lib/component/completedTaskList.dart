@@ -10,6 +10,8 @@ class completedTaskList extends StatefulWidget {
 class _completedTaskListState extends State<completedTaskList> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Text('completed'),
+    );
   }
 }

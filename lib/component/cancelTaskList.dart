@@ -9,6 +9,8 @@ class cancelTaskList extends StatefulWidget {
 class _cancelTaskListState extends State<cancelTaskList> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Text("Cancel"),
+    );
   }
 }

@@ -11,6 +11,8 @@ class newTaskList extends StatefulWidget {
 class _newTaskListState extends State<newTaskList> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Text('new'),
+    );
   }
 }
